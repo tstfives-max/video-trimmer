@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "capcut": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/capcut-mcp/src/server.js"],
+      "env": {
+        "CAPCUT_DRAFTS_DIR": "",
+        "CAPCUT_TEMPLATE_DRAFT": ""
+      }
+    }
+  }
+}
