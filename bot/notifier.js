@@ -11,7 +11,6 @@
  */
 
 const http = require('http')
-const qrcodeTerminal = require('qrcode-terminal')
 const { WechatyBuilder } = require('wechaty')
 
 const PORT = process.env.NOTIFIER_PORT || 8788
@@ -25,8 +24,9 @@ if (!NOTIFY_TARGET) {
 const bot = WechatyBuilder.build({ name: 'trim-notifier' })
 
 bot.on('scan', (qrcode, status) => {
-  console.log(`Scan this QR code to log the bot in (status ${status}):`)
-  qrcodeTerminal.generate(qrcode, { small: true })
+  console.log(`Scan this QR code to log the bot in (status ${status}).`)
+  console.log(`Paste this into any QR code generator/viewer:\n${qrcode}`)
+  console.log(`Or open: https://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`)
 })
 
 bot.on('login', (user) => {
