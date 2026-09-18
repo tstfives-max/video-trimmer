@@ -58,8 +58,8 @@ sends a WeChat message to a contact or room once a trim job completes.
 
 ```bash
 cd bot
-npm install
-WECHAT_NOTIFY_TARGET="Your Name" node notifier.js   # scan the QR code once to log in
+npm install   # fetches wechaty + wechaty-puppet-wechat
+WECHAT_NOTIFY_TARGET="Your Name" npm start   # scan the QR code once to log in
 ```
 
 Then point the backend at it before starting uvicorn:

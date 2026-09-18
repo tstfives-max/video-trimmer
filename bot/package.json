@@ -1,12 +1,14 @@
 {
-  "name": "bot",
+  "name": "trim-notifier",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "WeChat notifier for TRIM. trim-completion alerts (wechaty)",
+  "main": "notifier.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node notifier.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.19.2"
+  }
 }
